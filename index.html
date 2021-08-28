@@ -73,7 +73,7 @@
                 if(d.href && !d.href.includes('#')){
                     window.open(d.href, "_blank");    
                 } else {
-                    window.parent.document.getElementById(d.href).scrollIntoView(); 
+                    window.open(d.href, "_parent");
                 }
             })
 
