@@ -12,7 +12,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
-        <base href="https://spectatorpublishing.github.io/nsop2021/" target="_PARENT">
     </head>
     <body>
         <div class="img-overlay-wrap" id="containers">
@@ -31,9 +30,9 @@
 
             //Circle locations        
             var data = [ 
-                { "name" : "STUDENT LIFE", "cx" : 120, "cy" : 75, "r" : 8 , "fill" : "#FAE1AF", "href" : "/#student-life"},
-                { "name" : "CITY", "cx" : 100, "cy" : 136, "r" : 8 , "fill" : "#FAE1AF", "href" : "/#city"},
-                { "name" : "COVID-19", "cx" : 240, "cy" : 205, "r" : 8 , "fill" : "#FAE1AF", "href" : "/#covid-19"}, 
+                { "name" : "STUDENT LIFE", "cx" : 120, "cy" : 75, "r" : 8 , "fill" : "#FAE1AF", "href" : "https://spectatorpublishing.github.io/nsop2021/#student-life"},
+                { "name" : "CITY", "cx" : 100, "cy" : 136, "r" : 8 , "fill" : "#FAE1AF", "href" : "https://spectatorpublishing.github.io/nsop2021/#city"},
+                { "name" : "COVID-19", "cx" : 240, "cy" : 205, "r" : 8 , "fill" : "#FAE1AF", "href" : "https://spectatorpublishing.github.io/nsop2021/#covid-19"}, 
                 { "name" : "JOIN SPEC", "cx" : 355, "cy" : 142, "r" : 8 , "fill" : "#FAE1AF", "href": "http://www.specpublishing.com/join"},
                 { "name" : "EXPLORE HOUSING", "cx" : 320, "cy" : 68, "r" : 8 , "fill" : "#FAE1AF", "href": "http://theshaft.info/"},
                 { "name" : "EXPLORE CLUBS", "cx" : 310, "cy" : 15, "r" : 8 , "fill" : "#FAE1AF", "href": "https://lionclubs.info/"}]
@@ -70,10 +69,8 @@
             })
 
             .on('click',function(d) {
-                if(d.href && !d.href.includes('#')){
+                if(d.href) {
                     window.open(d.href, "_blank");    
-                } else {
-                    window.open(d.href, "_parent");
                 }
             })
 
