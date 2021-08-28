@@ -31,9 +31,9 @@
 
             //Circle locations        
             var data = [ 
-                { "name" : "STUDENT LIFE", "cx" : 120, "cy" : 75, "r" : 8 , "fill" : "#FAE1AF", "href" : "student-life"},
-                { "name" : "CITY", "cx" : 100, "cy" : 136, "r" : 8 , "fill" : "#FAE1AF", "href" : "city"},
-                { "name" : "COVID-19", "cx" : 240, "cy" : 205, "r" : 8 , "fill" : "#FAE1AF", "href" : "covid-19"}, 
+                { "name" : "STUDENT LIFE", "cx" : 120, "cy" : 75, "r" : 8 , "fill" : "#FAE1AF", "href" : "/#student-life"},
+                { "name" : "CITY", "cx" : 100, "cy" : 136, "r" : 8 , "fill" : "#FAE1AF", "href" : "/#city"},
+                { "name" : "COVID-19", "cx" : 240, "cy" : 205, "r" : 8 , "fill" : "#FAE1AF", "href" : "/#covid-19"}, 
                 { "name" : "JOIN SPEC", "cx" : 355, "cy" : 142, "r" : 8 , "fill" : "#FAE1AF", "href": "http://www.specpublishing.com/join"},
                 { "name" : "EXPLORE HOUSING", "cx" : 320, "cy" : 68, "r" : 8 , "fill" : "#FAE1AF", "href": "http://theshaft.info/"},
                 { "name" : "EXPLORE CLUBS", "cx" : 310, "cy" : 15, "r" : 8 , "fill" : "#FAE1AF", "href": "https://lionclubs.info/"}]
@@ -70,7 +70,7 @@
             })
 
             .on('click',function(d) {
-                if(d.href && d.href.includes('/')){
+                if(d.href && !d.href.includes('#')){
                     window.open(d.href, "_blank");    
                 } else {
                     window.parent.document.getElementById(d.href).scrollIntoView(); 
